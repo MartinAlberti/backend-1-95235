@@ -1,0 +1,52 @@
+[
+  {
+    "id": 2,
+    "name": "Coloración",
+    "description": "Aplicación de tintura para renovar o cambiar el color del cabello.",
+    "price": 18000,
+    "category": "Peluquería",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Masaje relajante",
+    "description": "Masaje corporal para aliviar tensiones y favorecer la relajación.",
+    "price": 20000,
+    "category": "Spa",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Limpieza facial",
+    "description": "Tratamiento facial para limpiar la piel y eliminar impurezas.",
+    "price": 15000,
+    "category": "Spa",
+    "available": false
+  },
+  {
+    "id": 5,
+    "name": "Tratamiento capilar",
+    "description": "Hidratación profunda para mejorar la suavidad y el brillo del cabello.",
+    "price": 12000,
+    "category": "Peluquería",
+    "available": true
+  },
+  {
+    "name": "Corte de cabello premium",
+    "description": "Corte con lavado ",
+    "duration": 40,
+    "price": 25000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 6
+  },
+  {
+    "name": "Corte de cabello premium",
+    "description": "Corte con lavado ",
+    "duration": 40,
+    "price": 25000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 7
+  }
+]
