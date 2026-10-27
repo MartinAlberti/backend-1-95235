@@ -1,0 +1,246 @@
+{
+  "info": {
+    "_postman_id": "7f6f2b9e-5d91-4d4c-9c7b-6b5d3e1a2026",
+    "name": "Services API - Express",
+    "description": "Colección para probar los endpoints CRUD de servicios. Ajustá la variable baseUrl si el servidor corre en otro host o puerto.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar servicios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/services",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services"
+          ]
+        },
+        "description": "Devuelve todos los servicios."
+      }
+    },
+    {
+      "name": "Obtener servicio por SID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/services/{{sid}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services",
+            "{{sid}}"
+          ]
+        },
+        "description": "Obtiene un servicio por su identificador. Definí la variable sid, por ejemplo 1."
+      }
+    },
+    {
+      "name": "Crear servicio - válido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('La respuesta es 201 Created', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('La respuesta incluye el servicio creado', function () {",
+              "    const body = pm.response.json();",
+              "    pm.expect(body).to.have.property('payload');",
+              "    pm.expect(body.payload).to.have.property('id');",
+              "    pm.collectionVariables.set('sid', String(body.payload.id));",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Consulta inicial\",\n  \"description\": \"Servicio de ejemplo para probar la API\",\n  \"duration\": 60,\n  \"price\": 15000,\n  \"category\": \"General\",\n  \"available\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/services",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services"
+          ]
+        },
+        "description": "Crea un servicio válido. El test guarda automáticamente el ID devuelto en la variable de colección sid."
+      }
+    },
+    {
+      "name": "Crear servicio - faltan campos (400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Servicio incompleto\",\n  \"price\": 5000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/services",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services"
+          ]
+        },
+        "description": "Prueba el middleware: debería responder 400 e indicar los campos faltantes."
+      }
+    },
+    {
+      "name": "Actualizar servicio - válido",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Consulta actualizada\",\n  \"description\": \"Descripción modificada\",\n  \"duration\": 45,\n  \"price\": 18000,\n  \"category\": \"General\",\n  \"available\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/services/{{sid}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services",
+            "{{sid}}"
+          ]
+        },
+        "description": "Actualiza los datos del servicio indicado por sid. En el código actual PUT exige todos los campos obligatorios."
+      }
+    },
+    {
+      "name": "Actualizar servicio - faltan campos (400)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 20000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/services/{{sid}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services",
+            "{{sid}}"
+          ]
+        },
+        "description": "Prueba la validación de campos en la ruta PUT; debería responder 400."
+      }
+    },
+    {
+      "name": "Eliminar servicio",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/services/{{sid}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services",
+            "{{sid}}"
+          ]
+        },
+        "description": "Elimina el servicio indicado por sid."
+      }
+    },
+    {
+      "name": "Consultar servicio inexistente (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/services/999999",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "services",
+            "999999"
+          ]
+        },
+        "description": "Prueba la respuesta 404 usando un ID que probablemente no exista."
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "sid",
+      "value": "1",
+      "type": "string"
+    }
+  ]
+}
