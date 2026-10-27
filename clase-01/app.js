@@ -24,28 +24,26 @@
 
 // console.log('7. Fin del script');
 
-
 import path from "node:path";
 import ServiceManager from "./Controllers/services.controller.js";
- 
-const DATABASE_NAME = "services.json"
-const databasePath = path.join(import.meta.dirname, "data", DATABASE_NAME)
 
-const manager = new ServiceManager(databasePath)
+const DATABASE_NAME = "services.json";
+const databasePath = path.join(import.meta.dirname, "data", DATABASE_NAME);
 
-console.log({"services": await manager.getServices()})
-console.log(await manager.getServiceById(4))
+const manager = new ServiceManager(databasePath);
+
+console.log({ services: await manager.getServices() });
+console.log({ payload: await manager.getServiceById(4) });
 
 const newService = {
-    name: "Corte de cabello premium",
-    description: "Corte con lavado ",
-    duration: 40,
-    price: 25000,
-    category:"Peluqueria",
-    available: true
-}
+  name: "Corte de cabello premium",
+  description: "Corte con lavado ",
+  duration: 40,
+  price: 25000,
+  category: "Peluqueria",
+  available: true,
+};
 
 // console.log({"New Service": await manager.addService(newService)})
 
-console.log({"Deleted":  await manager.deleteService(1)})
-
+console.log({ Deleted: await manager.deleteService(1) });
