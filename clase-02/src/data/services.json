@@ -78,5 +78,14 @@
     "price": 20000,
     "category": "Maquillaje",
     "available": false
+  },
+  {
+    "id": 11,
+    "name": "Consulta inicial",
+    "description": "Servicio de ejemplo para probar la API",
+    "duration": 60,
+    "price": 15000,
+    "category": "General",
+    "available": true
   }
 ]
