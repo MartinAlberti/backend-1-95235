@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "Corte de cabello",
+    "description": "Corte personalizado según el estilo y las preferencias del cliente.",
+    "price": 10000,
+    "category": "Peluquería",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Brushing",
+    "description": "Secado y peinado del cabello con cepillo para lograr volumen y movimiento.",
+    "price": 8000,
+    "category": "Peluquería",
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Alisado",
+    "description": "Tratamiento capilar para reducir el frizz y lograr un cabello más liso.",
+    "price": 25000,
+    "category": "Peluquería",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Manicura",
+    "description": "Limpieza, limado y esmaltado de uñas de las manos.",
+    "price": 9000,
+    "category": "Belleza",
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Pedicura",
+    "description": "Cuidado estético de los pies y las uñas con limado y esmaltado.",
+    "price": 12000,
+    "category": "Belleza",
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Depilación de cejas",
+    "description": "Diseño y depilación de cejas para definir su forma.",
+    "price": 5000,
+    "category": "Belleza",
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Masaje descontracturante",
+    "description": "Masaje corporal enfocado en aliviar contracturas y tensiones musculares.",
+    "price": 22000,
+    "category": "Spa",
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Exfoliación corporal",
+    "description": "Tratamiento que elimina células muertas y mejora la suavidad de la piel.",
+    "price": 16000,
+    "category": "Spa",
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Lifting de pestañas",
+    "description": "Tratamiento estético para levantar y curvar las pestañas naturales.",
+    "price": 14000,
+    "category": "Belleza",
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Maquillaje social",
+    "description": "Maquillaje personalizado para eventos, fiestas y ocasiones especiales.",
+    "price": 20000,
+    "category": "Maquillaje",
+    "available": false
+  },
+  {
+    "id": 11,
+    "name": "Consulta inicial",
+    "description": "Servicio de ejemplo para probar la API",
+    "duration": 60,
+    "price": 15000,
+    "category": "General",
+    "available": true
+  }
+]
