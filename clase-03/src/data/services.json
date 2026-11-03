@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Corte de cabello premium",
+    "description": "Corte con lavado",
+    "duration": 40,
+    "price": 25000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 1
+  },
+  {
+    "name": "Corte de cabello clásico",
+    "description": "Corte tradicional con peinado",
+    "duration": 30,
+    "price": 18000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 2
+  },
+  {
+    "name": "Coloración completa",
+    "description": "Aplicación de tintura y lavado",
+    "duration": 120,
+    "price": 55000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 3
+  },
+  {
+    "name": "Tratamiento de keratina",
+    "description": "Tratamiento capilar para reducir el frizz",
+    "duration": 150,
+    "price": 65000,
+    "category": "Peluqueria",
+    "available": false,
+    "id": 4
+  },
+  {
+    "name": "Peinado para eventos",
+    "description": "Peinado profesional para ocasiones especiales",
+    "duration": 60,
+    "price": 35000,
+    "category": "Peluqueria",
+    "available": true,
+    "id": 5
+  },
+  {
+    "name": "Masaje descontracturante",
+    "description": "Masaje corporal para aliviar tensiones musculares",
+    "duration": 60,
+    "price": 30000,
+    "category": "Spa",
+    "available": true,
+    "id": 6
+  },
+  {
+    "name": "Limpieza facial profunda",
+    "description": "Limpieza facial con exfoliación e hidratación",
+    "duration": 50,
+    "price": 28000,
+    "category": "Spa",
+    "available": true,
+    "id": 7
+  },
+  {
+    "name": "Masaje con piedras calientes",
+    "description": "Masaje relajante con piedras volcánicas calientes",
+    "duration": 75,
+    "price": 42000,
+    "category": "Spa",
+    "available": false,
+    "id": 8
+  },
+  {
+    "name": "Manicura completa",
+    "description": "Limpieza, limado y esmaltado de uñas",
+    "duration": 45,
+    "price": 20000,
+    "category": "Estetica",
+    "available": true,
+    "id": 9
+  },
+  {
+    "name": "Pedicura spa",
+    "description": "Tratamiento de pies con exfoliación y esmaltado",
+    "duration": 60,
+    "price": 26000,
+    "category": "Estetica",
+    "available": true,
+    "id": 10
+  },
+  {
+    "name": "update",
+    "description": "Test",
+    "duration": 60,
+    "price": 5000,
+    "category": "Bienestar",
+    "available": true,
+    "id": 11
+  }
+]
